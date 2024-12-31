@@ -1,0 +1,16 @@
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\bin\Debug\IMAGENS\CHECK.png
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\bin\Debug\IMAGENS\INATIVO.png
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\bin\Debug\Gestao de Projetos.exe.config
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\bin\Debug\Gestao de Projetos.exe
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\bin\Debug\Gestao de Projetos.pdb
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\obj\Debug\Gestao de Projetos.csproj.AssemblyReference.cache
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\obj\Debug\Gestao_de_Projetos.frmCadContratos.resources
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\obj\Debug\Gestao_de_Projetos.frmListaParceiros.resources
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\obj\Debug\Gestao_de_Projetos.Properties.Resources.resources
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\obj\Debug\Gestao de Projetos.csproj.GenerateResource.cache
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\obj\Debug\Gestao de Projetos.csproj.CoreCompileInputs.cache
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\obj\Debug\Gestao de Projetos.exe
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\obj\Debug\Gestao de Projetos.pdb
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\obj\Debug\Gestao_de_Projetos.frmCadParceiros.resources
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\obj\Debug\Gestao_de_Projetos.frmCadStatus.resources
+C:\Projetos VS\GestaodeProjetos\Gestao de Projetos\obj\Debug\Gestao_de_Projetos.frmListaContratos.resources

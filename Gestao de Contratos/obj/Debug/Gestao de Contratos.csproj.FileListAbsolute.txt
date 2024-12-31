@@ -1,0 +1,34 @@
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\bin\Debug\IMAGENS\CHECK.png
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\bin\Debug\IMAGENS\INATIVO.png
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\bin\Debug\Gestao de Projetos.exe.config
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\bin\Debug\Gestao de Projetos.exe
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\bin\Debug\Gestao de Projetos.pdb
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\obj\Debug\Gestao de Contratos.csproj.AssemblyReference.cache
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\obj\Debug\Gestao_de_Contratos.frmCadContratos.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\obj\Debug\Gestao_de_Contratos.frmCadParceiros.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\obj\Debug\Gestao_de_Contratos.frmCadStatus.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\obj\Debug\Gestao_de_Contratos.frmListaContratos.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\obj\Debug\Gestao_de_Contratos.frmListaParceiros.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\obj\Debug\Gestao_de_Contratos.frmPrincipal.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\obj\Debug\Gestao_de_Projetos.Properties.Resources.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\obj\Debug\Gestao de Contratos.csproj.GenerateResource.cache
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\obj\Debug\Gestao de Contratos.csproj.CoreCompileInputs.cache
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\obj\Debug\Gestao de Projetos.exe
+C:\Projetos VS\Gestao de Contratos\Gestao de Projetos\obj\Debug\Gestao de Projetos.pdb
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\IMAGENS\CHECK.png
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\IMAGENS\INATIVO.png
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\Gestao de Contratos.exe.config
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\Gestao de Contratos.exe
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\Gestao de Contratos.pdb
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\Gestao de Contratos.csproj.AssemblyReference.cache
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\Gestao_de_Contratos.frmCadContratos.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\Gestao_de_Contratos.frmCadParceiros.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\Gestao_de_Contratos.frmCadStatus.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\Gestao_de_Contratos.frmListaContratos.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\Gestao_de_Contratos.frmListaParceiros.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\Gestao_de_Contratos.frmPrincipal.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\Gestao_de_Contratos.Properties.Resources.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\Gestao de Contratos.csproj.GenerateResource.cache
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\Gestao de Contratos.csproj.CoreCompileInputs.cache
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\Gestao de Contratos.exe
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\Gestao de Contratos.pdb
