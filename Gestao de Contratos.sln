@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoContratos", "Gestao d
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoContratos.Data", "GestaoContratos.Data\GestaoContratos.Data.csproj", "{A1387C0E-95F2-4AE5-AE40-2F1BE9E3DF23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoContratos.Model", "GestaoContratos.Model\GestaoContratos.Model.csproj", "{C45F52D2-3BF2-4DA1-9A06-A5E6E366DDF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A1387C0E-95F2-4AE5-AE40-2F1BE9E3DF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1387C0E-95F2-4AE5-AE40-2F1BE9E3DF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1387C0E-95F2-4AE5-AE40-2F1BE9E3DF23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C45F52D2-3BF2-4DA1-9A06-A5E6E366DDF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C45F52D2-3BF2-4DA1-9A06-A5E6E366DDF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C45F52D2-3BF2-4DA1-9A06-A5E6E366DDF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C45F52D2-3BF2-4DA1-9A06-A5E6E366DDF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

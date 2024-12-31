@@ -4,10 +4,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestaoContratos.Data;
+using GestaoContratos.Model;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GestaoContratos
 {
@@ -19,6 +25,12 @@ namespace GestaoContratos
         public frmCadParceiros()
         {
             InitializeComponent();
+            txtCep.Leave += TxtCep_Leave;
+        }
+
+        private void TxtCep_Leave(object sender, EventArgs e)
+        {
+            BuscarCep();
         }
 
         private void frmClienteFornecedor_Load(object sender, EventArgs e)
@@ -62,14 +74,7 @@ namespace GestaoContratos
             string pastaImagens = System.IO.Path.Combine(Application.StartupPath, "IMAGENS");
             try
             {
-                if(cbCliente.Checked == false && cbFornec.Checked == false)
-                {
-                    MessageBox.Show("Informar o tipo do parceiro.", "Cadastro de Parceiro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    gbTipoParceiro.ForeColor = Color.Red;
-                    return;
-                }
-                    
-
+                
                 PARCEIROS parc = new PARCEIROS();
                     
                 parc.INDICA_CPF_CNPJ = rbPf.Checked ? 1 : 0;
@@ -77,7 +82,7 @@ namespace GestaoContratos
                 parc.INDICA_FORNECEDOR = cbFornec.Checked ? 1 : 0;
                 parc.CODIGO_PARCEIRO = txtParceiro.Text;
                 parc.NOME_PARCEIRO = txtNomeParceiro.Text;
-                parc.CPF_CNPJ = txtCpfCnpj.Text;
+                parc.CPF_CNPJ = txtDocumento.Text;
                 parc.EMAIL = txtEmail.Text;
                 parc.CELULAR = txtCelular.Text;
                 parc.CEP = txtCep.Text;
@@ -90,7 +95,22 @@ namespace GestaoContratos
                 parc.INATIVO = imagemAlternadaStatus ? 1 : 0;
                 parc.DATA_CADASTRO = DateTime.Now;
 
-                if(ParceirosDataAccess.InserirAtualizarParceiros(parc) == false)
+                validaCpfCnpj();
+
+                if (cbCliente.Checked == false && cbFornec.Checked == false)
+                {
+                    MessageBox.Show("Informar o tipo do parceiro!", "Cadastro de Parceiro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    gbTipoParceiro.ForeColor = Color.Red;
+                    return;
+                }
+                if (!string.IsNullOrWhiteSpace(txtLogradouro.Text) && string.IsNullOrWhiteSpace(txtNumero.Text))
+                {
+                    MessageBox.Show("Informar número do endereço!", "Cadastro de Parceiro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtNumero.Focus();
+                    return;
+                }
+
+                if (ParceirosDataAccess.InserirAtualizarParceiros(parc) == false)
                 {
                     MessageBox.Show("Falha ao tentar cadastrar o parceiro!", "Cadastro de Parceiro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -159,6 +179,179 @@ namespace GestaoContratos
         {
             frmListaParceiros frm = new frmListaParceiros();
             frm.ShowDialog();
+        }
+
+        public class Endereco
+        {
+            public string Logradouro { get; set; }
+            public string Bairro { get; set; }
+            public string Localidade { get; set; } // Cidade
+            public string Uf { get; set; } // Estado
+            public string Cep { get; set; }
+            public string Erro { get; set; } // Campo usado quando o CEP não existe
+        }
+        private async void BuscarCep()
+        {
+            if (string.IsNullOrEmpty(txtCep.Text))
+                return;
+            string cep = txtCep.Text.Trim();
+
+            if(cep.Length !=8 || !long.TryParse(cep, out _))
+            {
+                MessageBox.Show("Digite um CEP válido (8 dígitos)!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                // URL da API ViaCEP
+                string url = $"https://viacep.com.br/ws/{cep}/json/";
+
+                using (HttpClient client = new HttpClient())
+                {
+                    HttpResponseMessage response = await client.GetAsync(url);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string json = await response.Content.ReadAsStringAsync();
+
+                        // Usando Newtonsoft.Json para desserializar
+                        var endereco = JsonConvert.DeserializeObject<Endereco>(json);
+
+                        if (endereco != null && string.IsNullOrEmpty(endereco.Erro))
+                        {
+                            txtLogradouro.Text = endereco.Logradouro;
+                            txtBairro.Text = endereco.Bairro;
+                            txtCidade.Text = endereco.Localidade;
+                            txtUf.Text = endereco.Uf;
+                        }
+                        else
+                        {
+                            MessageBox.Show("CEP não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao buscar o CEP. Tente novamente mais tarde!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao buscar o CEP: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtCpfCnpj_Leave(object sender, EventArgs e)
+        {
+            validaCpfCnpj();
+        }
+        private void validaCpfCnpj()
+        {
+            if (string.IsNullOrEmpty(txtDocumento.Text))
+                return;
+            
+            string documento = txtDocumento.Text.Trim();
+            if (rbPf.Checked) // CPF
+            {
+                if (validaDocumento.ValidarCpf(documento))
+                    return;
+                else
+                {
+                    MessageBox.Show("CPF informado é inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtDocumento.Focus();
+                    txtDocumento.SelectAll();
+                }
+                    
+                
+            }
+            if (rbPj.Checked) // CNPJ
+            {
+                if (validaDocumento.ValidarCnpj(documento))
+                    return;
+                else
+                {
+                    MessageBox.Show("CNPJ informado é inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtDocumento.Focus();
+                    txtDocumento.SelectAll();
+                }
+                    
+            }
+        }
+
+        private void txtCelular_TextChanged(object sender, EventArgs e)
+        {
+            string celular = txtCelular.Text.Replace("(", "").Replace(")", "").Replace(" ", "").Replace("-", "");
+
+            if (celular.Length > 0)
+            {
+                if (celular.Length <= 2)
+                {
+                    txtCelular.Text = $"({celular}";
+                }
+                else if (celular.Length <= 7)
+                {
+                    txtCelular.Text = $"({celular.Substring(0, 2)}) {celular.Substring(2)}";
+                }
+                else
+                {
+                    txtCelular.Text = $"({celular.Substring(0, 2)}) {celular.Substring(2, 5)}-{celular.Substring(7)}";
+                }
+            }
+
+            // Move o cursor para o final do texto
+            txtCelular.SelectionStart = txtCelular.Text.Length;
+        }
+
+        private void txtCelular_Leave(object sender, EventArgs e)
+        {
+            if (txtCelular.Text.Length != 15) // Verifica o tamanho esperado com máscara
+            {
+                MessageBox.Show("Número de celular incompleto.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCelular.Focus();
+                txtCelular.SelectAll();
+            }
+        }
+
+        private void txtDocumento_TextChanged(object sender, EventArgs e)
+        {
+            string input = txtDocumento.Text.Replace(".", "").Replace("-", "").Replace("/", "");
+
+            if(rbPf.Checked)
+            {
+                txtDocumento.MaxLength = 14;
+                if (input.Length <= 11) // Aplica máscara de CPF
+                {
+                    if (input.Length > 3)
+                        input = input.Insert(3, ".");
+                    if (input.Length > 7)
+                        input = input.Insert(7, ".");
+                    if (input.Length > 11)
+                        input = input.Insert(11, "-");
+                }
+            }
+            if (rbPj.Checked)
+            {
+                txtDocumento.MaxLength = 18;
+                if (input.Length <= 14) // Aplica máscara de CNPJ
+                {
+                    if (input.Length > 2)
+                        input = input.Insert(2, ".");
+                    if (input.Length > 6)
+                        input = input.Insert(6, ".");
+                    if (input.Length > 10)
+                        input = input.Insert(10, "/");
+                    if (input.Length > 15)
+                        input = input.Insert(15, "-");
+                }
+            }
+            
+
+            // Atualiza o texto com a máscara
+            txtDocumento.Text = input;
+
+            // Move o cursor para o final do texto
+            txtDocumento.SelectionStart = txtDocumento.Text.Length;
         }
     }
 }

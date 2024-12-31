@@ -51,7 +51,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCpfCnpj = new System.Windows.Forms.TextBox();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
             this.lblCpfCnpj = new System.Windows.Forms.Label();
             this.txtNomeParceiro = new System.Windows.Forms.TextBox();
             this.lblTipoPessoa = new System.Windows.Forms.Label();
@@ -240,6 +240,7 @@
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(100, 26);
             this.txtCep.TabIndex = 0;
+            this.txtCep.Leave += new System.EventHandler(this.TxtCep_Leave);
             // 
             // groupBox3
             // 
@@ -247,7 +248,7 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.txtEmail);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.txtCpfCnpj);
+            this.groupBox3.Controls.Add(this.txtDocumento);
             this.groupBox3.Controls.Add(this.lblCpfCnpj);
             this.groupBox3.Controls.Add(this.txtNomeParceiro);
             this.groupBox3.Controls.Add(this.lblTipoPessoa);
@@ -263,9 +264,12 @@
             // txtCelular
             // 
             this.txtCelular.Location = new System.Drawing.Point(379, 190);
+            this.txtCelular.MaxLength = 15;
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(313, 26);
             this.txtCelular.TabIndex = 22;
+            this.txtCelular.TextChanged += new System.EventHandler(this.txtCelular_TextChanged);
+            this.txtCelular.Leave += new System.EventHandler(this.txtCelular_Leave);
             // 
             // label3
             // 
@@ -292,12 +296,15 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "E-MAIL";
             // 
-            // txtCpfCnpj
+            // txtDocumento
             // 
-            this.txtCpfCnpj.Location = new System.Drawing.Point(28, 120);
-            this.txtCpfCnpj.Name = "txtCpfCnpj";
-            this.txtCpfCnpj.Size = new System.Drawing.Size(313, 26);
-            this.txtCpfCnpj.TabIndex = 18;
+            this.txtDocumento.Location = new System.Drawing.Point(28, 120);
+            this.txtDocumento.MaxLength = 18;
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(313, 26);
+            this.txtDocumento.TabIndex = 18;
+            this.txtDocumento.TextChanged += new System.EventHandler(this.txtDocumento_TextChanged);
+            this.txtDocumento.Leave += new System.EventHandler(this.txtCpfCnpj_Leave);
             // 
             // lblCpfCnpj
             // 
@@ -450,7 +457,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCpfCnpj;
+        private System.Windows.Forms.TextBox txtDocumento;
         private System.Windows.Forms.Label lblCpfCnpj;
         private System.Windows.Forms.TextBox txtNomeParceiro;
         private System.Windows.Forms.Label lblTipoPessoa;
