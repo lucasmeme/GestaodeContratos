@@ -96,6 +96,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cadParametros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadParametros.Designer.cs">
+      <DependentUpon>cadParametros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cadUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadUsuarios.Designer.cs">
+      <DependentUpon>cadUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB_CONTRATOS.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
