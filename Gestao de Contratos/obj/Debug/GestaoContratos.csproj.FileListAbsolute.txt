@@ -47,3 +47,6 @@ C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\Newtonsoft.Json
 C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\GestaoContratos.Model.dll
 C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\GestaoContratos.Model.pdb
 C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\GestaoContratos.Model.dll.config
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\IMAGENS\Fechar Windows.png
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\IMAGENS\Cadeado.png
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\GestaoContratos.frmLogin.resources

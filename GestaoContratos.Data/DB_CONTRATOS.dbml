@@ -13,7 +13,7 @@
       <Column Name="VALOR_CONTRATO" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
       <Column Name="STATUS_CONTRATO" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="DATA_CADASTRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Association Name="PARCEIRO_CONTRATO" Member="PARCEIROS" Storage="_PARCEIRO" ThisKey="ID_PARCEIRO" OtherKey="ID_PARCEIRO" Type="PARCEIROS" IsForeignKey="true" />
+      <Association Name="PARCEIROS_CONTRATO" Member="PARCEIROS" Storage="_PARCEIRO" ThisKey="ID_PARCEIRO" OtherKey="ID_PARCEIRO" Type="PARCEIROS" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.PARCEIROS" Member="PARCEIROS">
@@ -36,7 +36,17 @@
       <Column Name="UF" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
       <Column Name="INATIVO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="DATA_CADASTRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Association Name="PARCEIRO_CONTRATO" Member="CONTRATOs" ThisKey="ID_PARCEIRO" OtherKey="ID_PARCEIRO" Type="CONTRATO" />
+      <Association Name="PARCEIROS_CONTRATO" Member="CONTRATOs" ThisKey="ID_PARCEIRO" OtherKey="ID_PARCEIRO" Type="CONTRATO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USUARIOS" Member="USUARIOs">
+    <Type Name="USUARIO">
+      <Column Name="ID_USUARIO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOME_USUARIO" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LOGIN" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SENHA" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="INATIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DATA_CADASTRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

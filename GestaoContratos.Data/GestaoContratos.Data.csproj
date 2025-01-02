@@ -56,6 +56,7 @@
       <DependentUpon>DB_CONTRATOS.dbml</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Login.Data.cs" />
     <Compile Include="Parceiros.Data.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
