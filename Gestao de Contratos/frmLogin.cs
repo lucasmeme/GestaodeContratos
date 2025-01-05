@@ -52,5 +52,11 @@ namespace GestaoContratos
             }
             
         }
+
+        private void lblRecuperarSenha_Click(object sender, EventArgs e)
+        {
+            frmRecuperarSenha frm = new frmRecuperarSenha();
+            frm.ShowDialog();
+        }
     }
 }

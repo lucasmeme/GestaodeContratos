@@ -128,6 +128,7 @@
             this.lblRecuperarSenha.TabIndex = 8;
             this.lblRecuperarSenha.TabStop = true;
             this.lblRecuperarSenha.Text = "Recuperar senha";
+            this.lblRecuperarSenha.Click += new System.EventHandler(this.lblRecuperarSenha_Click);
             // 
             // frmLogin
             // 

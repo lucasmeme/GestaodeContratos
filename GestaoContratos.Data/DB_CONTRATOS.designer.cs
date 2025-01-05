@@ -951,9 +951,11 @@ namespace GestaoContratos.Data
 		
 		private string _SENHA;
 		
-		private System.Nullable<bool> _INATIVO;
+		private string _EMAIL;
 		
-		private System.Nullable<System.DateTime> _DATA_CADASTRO;
+		private bool _INATIVO;
+		
+		private System.DateTime _DATA_CADASTRO;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -967,9 +969,11 @@ namespace GestaoContratos.Data
     partial void OnLOGINChanged();
     partial void OnSENHAChanging(string value);
     partial void OnSENHAChanged();
-    partial void OnINATIVOChanging(System.Nullable<bool> value);
+    partial void OnEMAILChanging(string value);
+    partial void OnEMAILChanged();
+    partial void OnINATIVOChanging(bool value);
     partial void OnINATIVOChanged();
-    partial void OnDATA_CADASTROChanging(System.Nullable<System.DateTime> value);
+    partial void OnDATA_CADASTROChanging(System.DateTime value);
     partial void OnDATA_CADASTROChanged();
     #endregion
 		
@@ -1058,8 +1062,28 @@ namespace GestaoContratos.Data
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INATIVO", DbType="Bit")]
-		public System.Nullable<bool> INATIVO
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string EMAIL
+		{
+			get
+			{
+				return this._EMAIL;
+			}
+			set
+			{
+				if ((this._EMAIL != value))
+				{
+					this.OnEMAILChanging(value);
+					this.SendPropertyChanging();
+					this._EMAIL = value;
+					this.SendPropertyChanged("EMAIL");
+					this.OnEMAILChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INATIVO", DbType="Bit NOT NULL")]
+		public bool INATIVO
 		{
 			get
 			{
@@ -1078,8 +1102,8 @@ namespace GestaoContratos.Data
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DATA_CADASTRO", DbType="DateTime")]
-		public System.Nullable<System.DateTime> DATA_CADASTRO
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DATA_CADASTRO", DbType="DateTime NOT NULL")]
+		public System.DateTime DATA_CADASTRO
 		{
 			get
 			{

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.btnEnviarEmail = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -42,31 +42,34 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "E-MAIL";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(29, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(496, 26);
-            this.textBox1.TabIndex = 1;
+            this.txtEmail.Location = new System.Drawing.Point(29, 81);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(496, 26);
+            this.txtEmail.TabIndex = 1;
             // 
-            // button1
+            // btnEnviarEmail
             // 
-            this.button1.Location = new System.Drawing.Point(531, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "ENVIAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEnviarEmail.Location = new System.Drawing.Point(531, 76);
+            this.btnEnviarEmail.Name = "btnEnviarEmail";
+            this.btnEnviarEmail.Size = new System.Drawing.Size(82, 37);
+            this.btnEnviarEmail.TabIndex = 2;
+            this.btnEnviarEmail.Text = "ENVIAR";
+            this.btnEnviarEmail.UseVisualStyleBackColor = true;
+            this.btnEnviarEmail.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmRecuperarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 174);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(676, 174);
+            this.Controls.Add(this.btnEnviarEmail);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmRecuperarSenha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recuperar Senha";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -76,7 +79,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Button btnEnviarEmail;
     }
 }
