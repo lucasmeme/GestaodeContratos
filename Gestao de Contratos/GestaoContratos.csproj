@@ -48,6 +48,36 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ActiveUp.Net.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6cceae6a4844c51b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.NET.2.0.1\lib\ActiveUp.Net.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Dns, Version=5.0.3454.364, Culture=neutral, PublicKeyToken=6fc67824e0089991, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.NET.2.0.1\lib\ActiveUp.Net.Dns.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Groupware, Version=5.0.3454.364, Culture=neutral, PublicKeyToken=db51b95d57ebfe25, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.NET.2.0.1\lib\ActiveUp.Net.Groupware.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Imap4, Version=5.0.3454.364, Culture=neutral, PublicKeyToken=9d424b1770e92b68, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.NET.2.0.1\lib\ActiveUp.Net.Imap4.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Mail, Version=5.0.3454.364, Culture=neutral, PublicKeyToken=851b9e39ef2572fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.NET.2.0.1\lib\ActiveUp.Net.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Nntp, Version=5.0.3454.364, Culture=neutral, PublicKeyToken=01416978360a49a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.NET.2.0.1\lib\ActiveUp.Net.Nntp.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.OpenPGP, Version=5.0.3454.364, Culture=neutral, PublicKeyToken=0e094b86584219e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.NET.2.0.1\lib\ActiveUp.Net.OpenPGP.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Pop3, Version=5.0.3454.364, Culture=neutral, PublicKeyToken=962567372c07b9fe, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.NET.2.0.1\lib\ActiveUp.Net.Pop3.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Smtp, Version=5.0.3454.364, Culture=neutral, PublicKeyToken=366752d00f09ae34, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.NET.2.0.1\lib\ActiveUp.Net.Smtp.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.WhoIs, Version=5.0.3454.364, Culture=neutral, PublicKeyToken=6b9afb81c1de5ed4, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.NET.2.0.1\lib\ActiveUp.Net.WhoIs.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>..\packages\BouncyCastle.Cryptography.2.5.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
@@ -57,6 +87,8 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MimeKit, Version=4.9.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
       <HintPath>..\packages\MimeKit.4.9.0\lib\net48\MimeKit.dll</HintPath>
     </Reference>
@@ -73,6 +105,7 @@
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Formats.Asn1, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Formats.Asn1.8.0.1\lib\net462\System.Formats.Asn1.dll</HintPath>
     </Reference>
@@ -254,12 +287,16 @@
     <Content Include="IMAGENS\CHECK.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="IMAGENS\relogio.ico" />
+    <None Include="IMAGENS\Database.ico" />
     <Content Include="IMAGENS\Fechar Windows.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IMAGENS\Cadeado.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="IMAGENS\Servidor.ico" />
+    <None Include="IMAGENS\usuarios.png" />
     <None Include="Resources\icons8-padlock-64.png" />
     <None Include="IMAGENS\icons8-minimize-48.png" />
     <Content Include="IMAGENS\INATIVO.png">

@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnEnviarEmail = new System.Windows.Forms.Button();
+            this.lblResultado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -59,11 +60,21 @@
             this.btnEnviarEmail.UseVisualStyleBackColor = true;
             this.btnEnviarEmail.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lblResultado
+            // 
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.Location = new System.Drawing.Point(25, 141);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(51, 20);
+            this.lblResultado.TabIndex = 3;
+            this.lblResultado.Text = "label2";
+            // 
             // frmRecuperarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 174);
+            this.ClientSize = new System.Drawing.Size(676, 192);
+            this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.btnEnviarEmail);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
@@ -71,6 +82,7 @@
             this.Name = "frmRecuperarSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recuperar Senha";
+            this.Load += new System.EventHandler(this.frmRecuperarSenha_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,5 +93,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnEnviarEmail;
+        private System.Windows.Forms.Label lblResultado;
     }
 }

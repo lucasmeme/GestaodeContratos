@@ -121,13 +121,25 @@
   <data name="Fechar Windows" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMAGENS\Fechar Windows.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-minimize-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMAGENS\icons8-minimize-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Database" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMAGENS\Database.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cadeado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMAGENS\Cadeado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMAGENS\usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-padlock-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-padlock-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Servidor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMAGENS\Servidor.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-minimize-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMAGENS\icons8-minimize-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="relogio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMAGENS\relogio.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

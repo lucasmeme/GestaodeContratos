@@ -65,3 +65,15 @@ C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\GestaoContratos
 C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\System.Configuration.ConfigurationManager.dll
 C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\System.Configuration.ConfigurationManager.xml
 C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\obj\Debug\GestaoContratos.frmConfigEmail.resources
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\ActiveUp.Net.Common.dll
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\ActiveUp.Net.Dns.dll
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\ActiveUp.Net.Groupware.dll
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\ActiveUp.Net.Imap4.dll
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\ActiveUp.Net.Mail.dll
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\ActiveUp.Net.Nntp.dll
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\ActiveUp.Net.OpenPGP.dll
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\ActiveUp.Net.Pop3.dll
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\ActiveUp.Net.Smtp.dll
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\ActiveUp.Net.WhoIs.dll
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Projetos VS\Gestao de Contratos\Gestao de Contratos\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml

@@ -32,9 +32,29 @@ namespace GestaoContratos
         {
             try
             {
+                string login = txtUsuario.Text;
+                string senha = txtSenha.Text;
+
                 USUARIO user = new USUARIO();
-                user.LOGIN = txtUsuario.Text;
-                user.SENHA = txtSenha.Text;
+                user.LOGIN = login;
+                user.SENHA = senha;
+
+                if(login == string.Empty || login == "USUÁRIO") 
+                {
+                    lblMensagem.Visible = true;
+                    lblMensagem.Text = "Por favor informar o seu usuário.";
+                    txtUsuario.Focus();
+                    return;
+                
+                }
+                if (senha == string.Empty || senha == "SENHA")
+                {
+                    lblMensagem.Visible = true;
+                    lblMensagem.Text = "Por favor informar sua senha.";
+                    txtSenha.Focus();
+                    return;
+
+                }
 
                 if (Login.ValidaLogin(user) == true)
                 {
@@ -43,7 +63,11 @@ namespace GestaoContratos
                     frm.ShowDialog();
                 }
                 else
-                    MessageBox.Show("Usuário/senha incorretos ou usuário não cadastrado no sistema.", "LOGIN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                {
+                    lblMensagem.Visible = true;
+                    lblMensagem.Text = "Usuário/senha incorretos ou usuário não cadastrado no sistema.";
+                }
+                    
             }
             catch (Exception ex)
             {
@@ -57,6 +81,57 @@ namespace GestaoContratos
         {
             frmRecuperarSenha frm = new frmRecuperarSenha();
             frm.ShowDialog();
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "")
+            {
+                txtUsuario.Text = "USUÁRIO";
+                txtUsuario.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void frmLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "USUÁRIO")
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            btnEntrar.Focus();
+        }
+
+        private void txtSenha_Leave(object sender, EventArgs e)
+        {
+            if (txtSenha.Text == "")
+            {
+                txtSenha.Text = "SENHA";
+                txtSenha.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txtSenha_Enter(object sender, EventArgs e)
+        {
+            if (txtSenha.Text == "")
+            {
+                txtSenha.Text = "SENHA";
+                txtSenha.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txtSenha_Click(object sender, EventArgs e)
+        {
+            txtSenha.Text = "";
         }
     }
 }

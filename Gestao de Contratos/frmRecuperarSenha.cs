@@ -38,12 +38,19 @@ namespace GestaoContratos
             try
             {
                 var resultado = Login.localizarUsuario(emailDestino);
-                MessageBox.Show(resultado, "Retorno", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblResultado.Text = resultado;
+                //MessageBox.Show(resultado, "Retorno", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erro ao enviar o e-mail: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               lblResultado.Text = ex.Message;
+               //MessageBox.Show($"Erro ao enviar o e-mail: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void frmRecuperarSenha_Load(object sender, EventArgs e)
+        {
+            lblResultado.Text = "";
         }
     }
 }

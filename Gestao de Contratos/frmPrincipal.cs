@@ -61,5 +61,11 @@ namespace GestaoContratos
             frmCadParceiros frm = new frmCadParceiros();
             frm.ShowDialog();
         }
+
+        private void eNVIODEEMAILToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConfigEmail frm = new frmConfigEmail();
+            frm.ShowDialog();
+        }
     }
 }

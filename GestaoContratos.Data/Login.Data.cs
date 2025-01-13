@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestaoContratos.Data;
 using GestaoContratos.Model;
+using System.Net.Mail;
+using System.Net;
+using MailKit;
+using GestaoContratos.Model;
 
 namespace GestaoContratos.Data
 {
@@ -51,8 +55,15 @@ namespace GestaoContratos.Data
 
                 if(localizarUser != null)
                 {
-                    emailService.EnviarEmail(localizaUser.EMAIL.Trim(), localizaUser.NOME_USUARIO.Trim(), localizaUser.SENHA.Trim());
-                    return "Enviado para " + localizaUser.EMAIL + " os dados de acesso para o sistema.";
+                    var mailService = new MailService.ConfiguracaoEmail();
+                    mailService.sendMail(
+                        subject: "RECUPERAÇÃO DE SENHA",
+                        body: "Olá, " + localizaUser.NOME_USUARIO + "," + "\nFoi requisitada a recuperação de senha para seu usuário.\n" +
+                        "Sua senha atual é:" + localizaUser.SENHA +
+                        "\nNo entanto, solicitamos que altere sua senha imediatamente \napós entrar no sistema.",
+                        recipientmail: new List<string> { localizaUser.EMAIL }
+                        );
+                    return "Enviado para " + localizaUser.EMAIL + " os dados \nde acesso para o sistema.";
                 }
                 else
                     return "Usuário e/ou e-mail não encontrado.";

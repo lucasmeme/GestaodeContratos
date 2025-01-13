@@ -37,3 +37,15 @@ C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\obj\Debug\GestaoContrato
 C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\GestaoContratos.Model.dll
 C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\GestaoContratos.Model.pdb
 C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\GestaoContratos.Model.dll.config
+C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\ActiveUp.Net.Common.dll
+C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\ActiveUp.Net.Dns.dll
+C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\ActiveUp.Net.Groupware.dll
+C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\ActiveUp.Net.Imap4.dll
+C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\ActiveUp.Net.Mail.dll
+C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\ActiveUp.Net.Nntp.dll
+C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\ActiveUp.Net.OpenPGP.dll
+C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\ActiveUp.Net.Pop3.dll
+C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\ActiveUp.Net.Smtp.dll
+C:\Projetos VS\Gestao de Contratos\GestaoContratos.Data\bin\Debug\ActiveUp.Net.WhoIs.dll
